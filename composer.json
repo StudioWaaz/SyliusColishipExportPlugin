@@ -14,7 +14,7 @@
         "php": "^8.1",
         "debuss-a/mtomsoapclient": "^2.1",
         "sylius/sylius": "^1.11",
-        "bitbag/shipping-export-plugin": "dev-1.14-upgrade"
+        "bitbag/shipping-export-plugin": "1.14-upgrade-dev"
     },
     "require-dev": {
         "behat/behat": "^3.6.1",
@@ -48,7 +48,11 @@
         "polishsymfonycommunity/symfony-mocker-container": "^1.0"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "phpstan/extension-installer": false
+        }
     },
     "extra": {
         "branch-alias": {
