@@ -53,7 +53,7 @@ class ShippingExportEventListener
 
         $shipment = $shippingExport->getShipment();
 
-        $weight = ($shipment->getWeight() > 0) ? $shipment->getWeight() : $shipment->getShippingWeight();
+        $weight = ($shipment->getWeight() > 0) ? $shipment->getWeight() : ($shipment->getShippingWeight() / 1000);
         if ($weight === null) {
             $weight = 0;
         }
