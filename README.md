@@ -28,7 +28,9 @@ return [
 ];
 ```
 
-Import required config in your `config/packages/_sylius.yaml` file:
+Import required config in your `config/packages/_sylius.yaml` file :  
+⚠️ **ONLY** if you want to use cn23/weight configuration in admin.
+
 
 ```yaml
 # config/packages/_sylius.yaml
