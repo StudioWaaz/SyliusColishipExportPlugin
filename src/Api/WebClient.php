@@ -117,12 +117,14 @@ final class WebClient implements WebClientInterface
     {
         $order = $this->getOrder();
 
+        $shippingBaseTotal = $order->getAdjustmentsTotal(\Sylius\Component\Core\Model\AdjustmentInterface::SHIPPING_ADJUSTMENT);
+
         $data = [
             'productCode' => $this->guessProductType(),
             'depositDate' => date('Y-m-d'),
             'orderNumber' => $order->getNumber(),
             'commercialName' => $this->getOrder()->getChannel()->getName(),
-            'totalAmount' => $order->getShippingTotal(),
+            'totalAmount' => $shippingBaseTotal,
             'returnTypeChoice' => 2
         ];
 
