@@ -8,12 +8,6 @@ sylius_grid:
           path: .
           options:
             template: "@IkuzoSyliusColishipPlugin/ShippingExport/Grid/Field/cn23.html.twig"
-        weight:
-          type: twig
-          label: ikuzo.ui.shippingWeight
-          path: .
-          options:
-            template: "@IkuzoSyliusColishipPlugin/ShippingExport/Grid/Field/shipmentWeight.html.twig"
 
 sylius_resource:
   resources:
