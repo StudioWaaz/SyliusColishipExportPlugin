@@ -86,7 +86,7 @@ final class WebClient implements WebClientInterface
             $data['contents']['article'][] = [
                 'description' => substr($orderItem->getProduct()->getName(), 0, 64),
                 'quantity' => $orderItem->getQuantity(),
-                'weight' => $orderItem->getVariant()->getWeight() ?? 1,
+                'weight' => ($orderItem->getVariant()->getWeight() / 1000) ?? 0.001,
                 'value' => round($orderItem->getTotal() / 100, 2),
                 'hsCode' => $this->shippingGateway->getConfigValue('default_hs_code'),
                 'originCountry' => $this->shippingGateway->getConfigValue('expeditor_country')
